@@ -25,12 +25,12 @@
 
 <meta name="color:Asker Background" content="#f0f0f0"/>
 <meta name="color:Background" content="#ffffff"/>
-<meta name="image:Background" content="https://i.imgur.com/FZl70Yy.png"/>
+<meta name="image:Background" content="https://i.imgur.com/0GC438J.png"/>
 <meta name="color:Border" content="#eeeeee"/>
 <meta name="color:Link" content="#000000"/>
 <meta name="color:Link Hover" content="#cfcfcf"/>
 <meta name="color:Like" content="#a77dc2"/>
-<meta name="color:Main Color" content="#cab1da"/>
+<meta name="color:Main Color" content="#dd9944"/>
 <meta name="color:Secondary Color" content="#dccbe7"/>
 <meta name="color:Question Background" content="#f5f5f5"/>
 <meta name="color:Quote Icon Color" content="#ffffff"/>
@@ -38,7 +38,7 @@
 <meta name="color:Text" content="#555555"/>
 <meta name="color:Tooltip Background" content="#ffffff"/>
 
-<meta name="image:Sidebar Image" content="https://i.imgur.com/0GC438J.png"/>
+<meta name="image:Sidebar Image" content="https://i.imgur.com/l4de70q.png"/>
 
 <meta name="text:Title" content="Theme Title"/>
 <meta name="text:Description" content="Keep it short"/>
@@ -287,8 +287,11 @@ border: 1px solid {color:Secondary Color};
 .entries img {
 height: auto;
 max-width: 100%;
-border-top-right-radius: 8px;
-border-top-left-radius: 8px;
+border-radius: 8px;
+}
+
+.photoset img{
+    border-radius: 8px;
 }
 
 .read_more {
@@ -482,8 +485,8 @@ color: {color:Link Hover};
 <a href="/" title="{text:home}"><span class="th th-home-o"></span></a>
 {block:AskEnabled}<a href="/ask" title="{text:ask}"><span class="th th-envelope-o"></span></a>{/block:AskEnabled}
 {block:ifLink1URL}<a href="{text:Link 1 URL}" title="{text:Link 1 Name}"><span class="th th-heart-1-o"></span></a>{/block:ifLink1URL}
-{block:ifLink2URL}<a href="{text:Link 2 URL}" title="{text:Link 2 Name}"><span class="th th-moon-o"></span></a>{/block:ifLink2URL}
-{block:ifLink3URL}<a href="{text:Link 3 URL}" title="{text:Link 3 Name}"><span class="th th-star-o"></span></a>{/block:ifLink3URL}
+{block:ifLink2URL}<a href="{text:Link 2 URL}" title="{text:Link 2 Name}"><span class="th th-code"></span></a>{/block:ifLink2URL}
+{block:ifLink3URL}<a href="{text:Link 3 URL}" title="{text:Link 3 Name}"><span class="th th-exclamation-o"></span></a>{/block:ifLink3URL}
 </div>
 
 <div id="user-information">
@@ -587,12 +590,13 @@ color: {color:Link Hover};
 {/block:Caption}
 {/block:Photo}
 
+<div class="photoset">
 {block:Photoset}
 {Photoset}
 {block:Caption}
 <div class="caption">{Caption}</div>
 {/block:Caption}
-{/block:Photoset}
+{/block:Photoset}</div>
 
 {block:Video}
 <div class="video">
